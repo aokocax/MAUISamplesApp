@@ -6,7 +6,8 @@
     <VerticalStackLayout>
         <CarouselView IndicatorView="indicatorView" IsVisible="True"
                       VerticalOptions="Fill" HorizontalOptions="Fill" 
-                      
+                      x:Name="carouselView"
+                      CurrentItemChanged="CarouselView_CurrentItemChanged"
                       ItemsSource="{Binding model}">
 
             <CarouselView.ItemTemplate>
