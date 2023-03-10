@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUISamplesApp.Pages.CarouselView"
+             Title="CarouselView">
+    <VerticalStackLayout>
+        <CarouselView IndicatorView="indicatorView" IsVisible="True"
+                      VerticalOptions="Fill" HorizontalOptions="Fill" 
+                      
+                      ItemsSource="{Binding model}">
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout Orientation="Vertical" Margin="20,0,20,0" BackgroundColor="White" VerticalOptions="Fill" >
+                      
+                        <Label Text="{Binding title}" TextColor="Black" HorizontalOptions="Center" Margin="20,20,20,20"
+                                       FontSize="Medium"  VerticalOptions="Center" HorizontalTextAlignment="Center">
+                            
+                        </Label>
+                        <Image Source="{Binding imageSource}"  Margin="0,20,0,0" VerticalOptions="FillAndExpand" HorizontalOptions="Fill" />
+                    </StackLayout>
+
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+                    
+        </CarouselView>
+        <IndicatorView x:Name="indicatorView"
+                            Margin="0,18,0,0"     
+                            IndicatorSize="20"  
+                            HorizontalOptions="Center"
+                            VerticalOptions="Start"
+                            IndicatorColor="Red"         
+                            SelectedIndicatorColor="Black">
+        
+        </IndicatorView>
+    </VerticalStackLayout>
+</ContentPage>
