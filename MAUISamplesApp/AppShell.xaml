@@ -9,7 +9,7 @@
 
     <ShellContent
         Title="Home"
-        ContentTemplate="{DataTemplate Pages:CarouselView}"
+        ContentTemplate="{DataTemplate Pages:SplitLayout}"
         Route="MainPage" />
 
 </Shell>
